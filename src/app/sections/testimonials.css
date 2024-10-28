@@ -1,0 +1,7 @@
+.testimonials .section-header {
+    margin-bottom: 40px;
+}
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+    overflow: hidden;
+}
