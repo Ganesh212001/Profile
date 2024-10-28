@@ -1,16 +1,24 @@
-import React from "react";
+"use client"
+
+import React,{useEffect, useState} from "react";
 import "./resume.css";
 import SectionTitle from "../components/SectionTitle";
 import ResumeItem from "../components/ResumeItem";
 
-async function getResumeData() {
-  const res = await fetch("http://localhost:3000/api/resume");
-  return res.json();
+
+
+export default function Resume() {
+ const [items, setItems] = useState<any>([])
+
+ async function getResumeData() {
+  const res = await fetch("/api/resume")
+  .then((res) => res.json())
+  .then((data) => setItems(data))
+  .catch((e) => console.log(e.message));
 }
-
-export default async function Resume() {
-  const items: [] | any = await getResumeData();
-
+  useEffect(()=>{
+  getResumeData()
+  },[])
   return (
     <section id="resume" className="resume">
       <div className="container">
@@ -20,7 +28,7 @@ export default async function Resume() {
         />
         <div className="row">
           <div className="col-lg-6">
-            <h3 className="resume-title">{items[0].category}</h3>
+            <h3 className="resume-title">{ items && items.length > 0 && items[0].category}</h3>
             {items &&
               items.length > 0 &&
               items[0].content.map(
@@ -32,7 +40,7 @@ export default async function Resume() {
                   details: [string];
                 }) => <ResumeItem key={item.id} item={item} />
               )}
-            <h3 className="resume-title">{items[1].category}</h3>
+            <h3 className="resume-title">{items && items.length > 0 && items[1].category}</h3>
             {items &&
               items.length > 0 &&
               items[1].content.map(
@@ -46,7 +54,7 @@ export default async function Resume() {
               )}
           </div>
           <div className="col-lg-6">
-            <h3 className="resume-title">{items[2].category}</h3>
+            <h3 className="resume-title">{ items && items.length > 0 && items[2].category}</h3>
             {items &&
               items.length > 0 &&
               items[2].content.map(

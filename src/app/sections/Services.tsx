@@ -1,14 +1,24 @@
-import React from "react";
+"use client"
+
+import React,{useEffect, useState} from "react";
 import SectionTitle from "../components/SectionTitle";
 import ServicesItem from "../components/ServicesItem";
 
-async function getServicesData() {
-  const res = await fetch("http://localhost:3000/api/services");
-  return res.json();
-}
 
-export default async function Services() {
-  const items: [] = await getServicesData();
+
+export default function Services() {
+  const [items, setItems] = useState<any>([])
+
+  async function getServicesData() {
+    const res = await fetch("/api/services")
+    .then((res) => res.json())
+    .then((data) => setItems(data))
+    .catch((e) => console.log(e.message));
+  }
+
+  useEffect(()=>{
+    getServicesData()
+    },[])
 
   return (
     <section id="services" className="services">
