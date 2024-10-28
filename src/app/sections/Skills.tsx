@@ -14,6 +14,7 @@ export default function Skills() {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY);
     });
+    handleSectionActive();
     return () => {
       window.removeEventListener("scroll", () => {
         setScroll(window.scrollY);
@@ -33,9 +34,9 @@ export default function Skills() {
     }
   };
 
-  useEffect(() => {
-    handleSectionActive();
-  }, [scroll]);
+  // useEffect(() => {
+  //   handleSectionActive();
+  // }, [scroll]);
 
   return (
     <section id="skills" className="skills section-bg">

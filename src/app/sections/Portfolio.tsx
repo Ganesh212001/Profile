@@ -4,7 +4,11 @@ import React, { useState, useEffect } from "react";
 import "./portfolio.css";
 import SectionTitle from "../components/SectionTitle";
 import { filters } from "../data/data";
-import PortfolioItem from "../components/PortfolioItem";
+import dynamic from "next/dynamic";
+
+const PortfolioItem = dynamic(() => import('../components/PortfolioItem'), {
+  ssr: false
+});
 
 export default function Portfolio() {
   const [data, setData] = useState([]);

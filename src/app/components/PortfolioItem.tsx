@@ -4,8 +4,6 @@ import React, { useEffect } from "react";
 import "./portfolioItem.css";
 import Glightbox from "glightbox";
 
-import { portfolioData } from "../data/data";
-
 export default function PortfolioItem({
   item
 }: {
@@ -16,7 +14,9 @@ export default function PortfolioItem({
     brief: string;
     category: string;
   };
-}) {
+}) 
+
+{
   useEffect(() => {
     Glightbox({
       selector: ".portfolio-lightbox",

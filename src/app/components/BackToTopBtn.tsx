@@ -17,11 +17,16 @@ export default function BackToTopBtn() {
   }, [scroll]);
 
   const backToTop = () => {
-    window.scrollTo(0, 0);
+
+
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+    // window.scrollTo(0, 0);
   };
   return (
     <a
-      onClick={backToTop}
+      // onClick={backToTop}
       className={`back-to-top d-flex align-items-center justify-content-center ${
         scroll > 100 ? "active" : undefined
       }`}
