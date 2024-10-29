@@ -30,11 +30,11 @@ export default function About() {
                 </li>
                 <li>
                   <i className="bi bi-chevron-right"></i>{" "}
-                  <strong>Website:</strong> <span>www.example.com</span>
+                  <strong>Website:</strong> <span>profile-ganesh.vercel.app</span>
                 </li>
                 <li>
                   <i className="bi bi-chevron-right"></i>{" "}
-                  <strong>Phone:</strong> <span>+91 1234567890</span>
+                  <strong>Phone:</strong> <span>+91 9724158961</span>
                 </li>
                 <li>
                   <i className="bi bi-chevron-right"></i> <strong>City:</strong>{" "}
@@ -50,11 +50,11 @@ export default function About() {
                 </li>
                 <li>
                   <i className="bi bi-chevron-right"></i>{" "}
-                  <strong>Degree:</strong> <span>ITUS</span>
+                  <strong>Degree:</strong> <span>Qualified for Web Development</span>
                 </li>
                 <li>
                   <i className="bi bi-chevron-right"></i>{" "}
-                  <strong>Email:</strong> <span>email@example.com</span>
+                  <strong>Email:</strong> <span>ganeshmahajan21062001@gmail.com</span>
                 </li>
                 <li>
                   <i className="bi bi-chevron-right"></i>{" "}
@@ -63,7 +63,9 @@ export default function About() {
               </ul>
             </div>
           </div>
-          <p>I am a MERN stack developer and video editor with a passion for creating efficient, modern web applications and visually engaging content. My skill set spans full stack development, front-end UI/UX design, and post-production video editing. I focus on delivering innovative, user-focused solutions that drive both performance and creativity for my clients' projects, ensuring quality results that align with their business goals.</p>
+          <p>
+          As a MERN stack developer, I specialize in building dynamic, user-friendly web applications using MongoDB, Express, React, and Node.js. I focus on creating efficient, scalable solutions that deliver a seamless, responsive experience across devices. Prioritizing usability and accessibility, I design modern interfaces that reflect the client’s brand while ensuring smooth interaction and high performance.</p>
+          <p>In video editing, my goal is to bring stories to life with polished, engaging content. Using tools like Adobe Premiere Pro and After Effects, I craft visually compelling videos that captivate audiences through effective pacing, transitions, and sound design. Each project aims to leave a lasting impression, resonate with viewers, and perfectly reflect the client’s vision.</p>
         </div>
       </div>
       </div>
