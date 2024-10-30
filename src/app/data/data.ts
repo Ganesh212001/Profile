@@ -372,7 +372,7 @@ export const resume = [
         details: [
           `Surat, Gujarat, India`,
           `(+91) 9724158961`,
-          `your.name@example.com`,
+          `ganeshmahajan21062001@gmail.com`,
         ],
       },
     ],
